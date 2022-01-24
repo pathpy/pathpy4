@@ -3,7 +3,7 @@
 # =============================================================================
 # File      : setup.py -- Setup script for pathpy
 # Author    : Jürgen Hackl <hackl@ifi.uzh.ch>
-# Time-stamp: <Mon 2022-01-24 16:21 juergen>
+# Time-stamp: <Mon 2022-01-24 16:34 juergen>
 #
 # Copyright (c) 2016-2022 Pathpy Developers
 # =============================================================================
@@ -18,6 +18,8 @@ from setuptools import find_packages, setup
 import versioneer
 
 project_dir = Path(__file__).parent
+
+version = versioneer.get_version()
 
 # Minimum required python version
 min_version = (3, 8)
