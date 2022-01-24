@@ -16,6 +16,9 @@ target-version = ["py38", "py39", "py310"]
 # If you need to exclude additional folders, consider using extend-exclude to avoid disabling the
 # default .gitignore behaviour.
 
+[tool.pycln]
+all = true
+
 [tool.isort]
 profile = "black"
 line_length = 79
