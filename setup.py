@@ -3,7 +3,7 @@
 # =============================================================================
 # File      : setup.py -- Setup script for pathpy
 # Author    : Jürgen Hackl <hackl@ifi.uzh.ch>
-# Time-stamp: <Mon 2022-01-24 11:06 juergen>
+# Time-stamp: <Mon 2022-01-24 15:38 juergen>
 #
 # Copyright (c) 2016-2022 Pathpy Developers
 # =============================================================================
@@ -83,7 +83,8 @@ CLASSIFIERS = [
     "Intended Audience :: Science/Research",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
-    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "License :: OSI Approved :: "
+    "GNU Affero General Public License v3 or later (AGPLv3+)",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Scientific/Engineering :: Visualization",
