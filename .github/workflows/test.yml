@@ -1,4 +1,4 @@
-name: test
+name: Test pathpy package
 
 on: [push, pull_request]
 
@@ -24,6 +24,6 @@ jobs:
         python -m pip install -e .
         python -m pip list
 
-    - name: Test PathPy
+    - name: Test pathpy
       run: |
         pytest
