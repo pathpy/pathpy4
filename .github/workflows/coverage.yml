@@ -1,0 +1,36 @@
+name: Pathpy code coverage
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  report:
+    runs-on: Ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.9]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install packages
+      run: |
+        pip install --upgrade pip wheel setuptools
+        python -m pip install -r requirements/requirements.txt -r requirements/dev-requirements.txt
+        pip install -e .
+        pip list
+
+    - name: Test pathpy
+      run: |
+        pytest --cov=pathpy --cov-report=xml
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
