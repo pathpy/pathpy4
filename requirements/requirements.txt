@@ -10,5 +10,3 @@ colorama==0.4.4
     # via -r requirements/requirements.in
 typer==0.4.0
     # via -r requirements/requirements.in
-versioneer==0.21
-    # via -r requirements/requirements.in
