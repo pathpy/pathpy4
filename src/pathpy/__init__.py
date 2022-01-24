@@ -2,6 +2,9 @@
 
 # flake8: noqa
 # pylint: disable=unused-import
+# nopycln: file
+
+from pathpy.lib import InvalidFactorialError, factorial
 
 from . import _version
 
