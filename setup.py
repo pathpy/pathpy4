@@ -3,7 +3,7 @@
 # =============================================================================
 # File      : setup.py -- Setup script for pathpy
 # Author    : Jürgen Hackl <hackl@ifi.uzh.ch>
-# Time-stamp: <Mon 2022-01-24 15:38 juergen>
+# Time-stamp: <Mon 2022-01-24 16:21 juergen>
 #
 # Copyright (c) 2016-2022 Pathpy Developers
 # =============================================================================
@@ -15,10 +15,9 @@ from pathlib import Path
 import sys
 
 from setuptools import find_packages, setup
+import versioneer
 
 project_dir = Path(__file__).parent
-
-version = "1.0.0"
 
 # Minimum required python version
 min_version = (3, 8)
@@ -37,7 +36,9 @@ if sys.version_info[:2] < min_version:
 # Initialize setup parameters
 DISTNAME = "pathpy4"
 
-VERSION = version
+VERSION = versioneer.get_version()
+
+CMDCLASS = versioneer.get_cmdclass()
 
 PYTHON_REQUIRES = ">={}".format(".".join(map(str, min_version)))
 
@@ -114,6 +115,7 @@ setup(
     url=URL,
     project_urls=PROJECT_URLS,
     version=VERSION,
+    cmdclass=CMDCLASS,
     download_url=DOWNLOAD_URL,
     install_requires=INSTALL_REQUIRES,
     packages=PACKAGES,

@@ -1,2 +1,3 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+* text=autosrc/pathpy/_version.py export-subst
+src/pathpy/_version.py export-subst
