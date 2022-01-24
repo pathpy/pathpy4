@@ -1,0 +1,6 @@
+﻿pathpy.InvalidFactorialError
+============================
+
+.. currentmodule:: pathpy
+
+.. autoexception:: InvalidFactorialError

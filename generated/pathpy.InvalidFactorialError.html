@@ -6,37 +6,36 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>API reference &#8212; pathpy 4.0.0+2.g8e98db2 documentation</title>
+    <title>pathpy.InvalidFactorialError &#8212; pathpy 4.0.0+2.g8e98db2 documentation</title>
     
-    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
   
     
     <link rel="stylesheet"
-      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
     <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
     <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
   
     
       
   
     
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/pydata-sphinx-theme.css" />
     
-    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
   
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pathpy.factorial" href="generated/pathpy.factorial.html" />
-    <link rel="prev" title="Welcome to pathpy4’s documentation!" href="index.html" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="pathpy.factorial" href="pathpy.factorial.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -55,8 +54,8 @@
     
     
 
-<a class="navbar-brand" href="index.html">
-  <img src="_static/pathpy_logo.png" class="logo" alt="logo">
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/pathpy_logo.png" class="logo" alt="logo">
 </a>
 
 
@@ -74,7 +73,7 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
+ <a class="reference internal nav-link" href="../api.html">
   API reference
  </a>
 </li>
@@ -104,19 +103,19 @@
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="nav bd-sidenav">
+    <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="generated/pathpy.factorial.html">
+  <a class="reference internal" href="pathpy.factorial.html">
    pathpy.factorial
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="generated/pathpy.InvalidFactorialError.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    pathpy.InvalidFactorialError
   </a>
  </li>
@@ -159,22 +158,14 @@
               
               <div>
                 
-  <section id="api-reference">
-<span id="api-ref"></span><h1>API reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
-<table class="longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/pathpy.factorial.html#pathpy.factorial" title="pathpy.factorial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">factorial</span></code></a>(n)</p></td>
-<td><p>Computes the factorial through a recursive algorithm.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/pathpy.InvalidFactorialError.html#pathpy.InvalidFactorialError" title="pathpy.InvalidFactorialError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvalidFactorialError</span></code></a></p></td>
-<td><p>Error generated if an invalid factorial input is given.</p></td>
-</tr>
-</tbody>
-</table>
+  <section id="pathpy-invalidfactorialerror">
+<h1>pathpy.InvalidFactorialError<a class="headerlink" href="#pathpy-invalidfactorialerror" title="Permalink to this headline">¶</a></h1>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pathpy.InvalidFactorialError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pathpy.</span></span><span class="sig-name descname"><span class="pre">InvalidFactorialError</span></span><a class="reference internal" href="../_modules/pathpy/lib.html#InvalidFactorialError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pathpy.InvalidFactorialError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Error generated if an invalid factorial input is given.</p>
+</dd></dl>
+
 </section>
 
 
@@ -183,19 +174,12 @@
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="pathpy.factorial.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to pathpy4’s documentation!</p>
+            <p class="prev-next-title">pathpy.factorial</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="generated/pathpy.factorial.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">pathpy.factorial</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
               
@@ -205,7 +189,7 @@
       </div>
     </div>
   
-    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
   <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
