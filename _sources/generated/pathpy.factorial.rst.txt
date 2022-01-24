@@ -1,0 +1,6 @@
+﻿pathpy.factorial
+================
+
+.. currentmodule:: pathpy
+
+.. autofunction:: factorial
