@@ -3,7 +3,7 @@
 # =============================================================================
 # File      : setup.py -- Setup script for pathpy
 # Author    : Jürgen Hackl <hackl@ifi.uzh.ch>
-# Time-stamp: <Mon 2022-01-24 16:34 juergen>
+# Time-stamp: <Tue 2022-01-25 07:01 juergen>
 #
 # Copyright (c) 2016-2022 Pathpy Developers
 # =============================================================================
@@ -12,9 +12,10 @@ Setup script for pathpy.
 """
 
 from pathlib import Path
+import os
 import sys
-
-from setuptools import find_packages, setup
+import glob
+from setuptools import find_packages, setup, Extension
 import versioneer
 
 project_dir = Path(__file__).parent
@@ -59,12 +60,12 @@ URL = "https://www.pathpy.net"
 
 LICENSE = "AGPL-3.0+"
 
-DOWNLOAD_URL = "https://github.com/pathpy/pathpy"
+DOWNLOAD_URL = "https://github.com/pathpy/pathpy4"
 
 PROJECT_URLS = {
-    "Issue Tracker": "https://github.com/pathpy/pathpy/issues",
-    "Documentation": "https://pathpy.github.io/",
-    "Source Code": "https://github.com/pathpy/pathpy",
+    "Issue Tracker": "https://github.com/pathpy/pathpy4/issues",
+    "Documentation": "https://pathpy.github.io/pathpy4/",
+    "Source Code": "https://github.com/pathpy/pathpy4",
 }
 
 INSTALL_REQUIRES = (
@@ -72,6 +73,10 @@ INSTALL_REQUIRES = (
     .read_text()
     .split("\n")
 )
+
+EXTENTIONS = Extension("pathpy._pathpy",
+                       glob.glob(os.path.join("src", "_pathpy", "*.c")))
+
 
 PACKAGES = find_packages("src")
 
@@ -102,6 +107,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
 ]
 
 
@@ -128,6 +134,7 @@ setup(
     zip_safe=False,
     include_package_data=True,
     python_requires=PYTHON_REQUIRES,
+    ext_modules=[EXTENTIONS],
     setup_requires=["pytest-runner", "flake8"],
     tests_require=["pytest"],
 )

@@ -5,6 +5,7 @@
 # nopycln: file
 
 from pathpy.lib import InvalidFactorialError, factorial
+from pathpy._pathpy import PathPyPath
 
 from . import _version
 

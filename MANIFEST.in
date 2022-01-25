@@ -5,3 +5,4 @@ include src/pathpy/py.typed
 recursive-exclude tests *
 include versioneer.py
 include src/pathpy/_version.py
+include src/_pathpy/*.h

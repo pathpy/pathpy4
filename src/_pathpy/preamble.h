@@ -1,0 +1,7 @@
+#ifndef PYTHON_PATHPY_PREAMBLE_H
+#define PYTHON_PATHPY_PREAMBLE_H
+
+#define PY_SSIZE_T_CLEAN
+#include <Python.h>
+
+#endif /* PYTHON_PATHPY_PREAMBLE_H */
