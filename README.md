@@ -62,8 +62,8 @@ To cleanly install your dependencies into your virtual environment:
 To update dependencies and add new requirements, modify the `requirements.in` and `dev-requirements.in` files in the folder `requirements`:
 
 ```bash
-(venv) $ python -m piptools compile --upgrade requirements/requirements.txt
-(venv) $ python -m piptools compile --upgrade requirements/dev-requirements.txt
+(venv) $ python -m piptools compile --upgrade requirements/requirements.in
+(venv) $ python -m piptools compile --upgrade requirements/dev-requirements.in
 ```
 
 
