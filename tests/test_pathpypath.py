@@ -15,11 +15,11 @@ from pathpy import PathPyPath
 
 def test_name():
     """Test name of the PathPyPath"""
-    path_1 = PathPyPath(name='name')
-    assert path_1.name == 'name'
+    path_1 = PathPyPath(name="name")
+    assert path_1.name == "name"
 
-    path_1.name = 'new'
-    assert path_1.name == 'new'
+    path_1.name = "new"
+    assert path_1.name == "new"
 
     with pytest.raises(TypeError):
         path_1.name = 111

@@ -11,11 +11,12 @@
 Setup script for pathpy.
 """
 
-from pathlib import Path
-import os
-import sys
 import glob
-from setuptools import find_packages, setup, Extension
+import os
+from pathlib import Path
+import sys
+
+from setuptools import Extension, find_packages, setup
 import versioneer
 
 project_dir = Path(__file__).parent
@@ -74,8 +75,9 @@ INSTALL_REQUIRES = (
     .split("\n")
 )
 
-EXTENTIONS = Extension("pathpy._pathpy",
-                       glob.glob(os.path.join("src", "_pathpy", "*.c")))
+EXTENTIONS = Extension(
+    "pathpy._pathpy", glob.glob(os.path.join("src", "_pathpy", "*.c"))
+)
 
 
 PACKAGES = find_packages("src")
