@@ -62,7 +62,7 @@ static int
 pathpymodule_PathPyPath_init(PathPyPathObject *self, PyObject *args, PyObject *kwargs)
 {
   PyObject *name=NULL, *tmp;
-  long int uid = -1;
+  long uid = -1;
 
   static char* keywords[] = {"uid","name", NULL};
 
