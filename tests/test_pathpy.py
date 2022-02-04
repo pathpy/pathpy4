@@ -1,5 +1,6 @@
 import pytest
 
+from pathpy import add, subtract
 from pathpy.lib import InvalidFactorialError, factorial
 
 
@@ -26,3 +27,11 @@ def test_factorial(n: int, expected: int) -> None:
 def test_invalid_factorial(n: int) -> None:
     with pytest.raises(InvalidFactorialError):
         factorial(n)
+
+
+def test_add():
+    assert add(1, 2) == 3
+
+
+def test_sub():
+    assert subtract(1, 2) == -1
