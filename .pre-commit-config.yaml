@@ -50,4 +50,4 @@ repos:
   rev: v1.1.10
   hooks:
   - id: remove-tabs
-    exclude: ^(docs)
+    exclude: ^(docs|Makefile)
