@@ -1,0 +1,6 @@
+﻿pathpy.subtract
+===============
+
+.. currentmodule:: pathpy
+
+.. autofunction:: subtract

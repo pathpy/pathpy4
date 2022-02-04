@@ -1,0 +1,6 @@
+﻿pathpy.add
+==========
+
+.. currentmodule:: pathpy
+
+.. autofunction:: add
