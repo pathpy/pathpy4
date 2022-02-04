@@ -3,7 +3,7 @@
 # =============================================================================
 # File      : setup.py -- Setup script for pathpy
 # Author    : Jürgen Hackl <hackl@ifi.uzh.ch>
-# Time-stamp: <Mon 2022-01-24 16:34 juergen>
+# Time-stamp: <Fri 2022-02-04 20:18 juergen>
 #
 # Copyright (c) 2016-2022 Pathpy Developers
 # =============================================================================
@@ -11,9 +11,12 @@
 Setup script for pathpy.
 """
 
+import glob
+import os
 from pathlib import Path
 import sys
 
+from pybind11.setup_helpers import Pybind11Extension, build_ext
 from setuptools import find_packages, setup
 import versioneer
 
@@ -104,6 +107,16 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.10",
 ]
 
+EXTENTIONS = [
+    Pybind11Extension(
+        "pathpy._pathpy",
+        glob.glob(os.path.join("src", "_pathpy", "*.cpp")),
+        # Example: passing in the version to the compiled code
+        define_macros=[("VERSION_INFO", VERSION)],
+    ),
+]
+
+CMDCLASS["build_ext"] = build_ext
 
 setup(
     name=DISTNAME,
@@ -117,7 +130,6 @@ setup(
     url=URL,
     project_urls=PROJECT_URLS,
     version=VERSION,
-    cmdclass=CMDCLASS,
     download_url=DOWNLOAD_URL,
     install_requires=INSTALL_REQUIRES,
     packages=PACKAGES,
@@ -130,4 +142,7 @@ setup(
     python_requires=PYTHON_REQUIRES,
     setup_requires=["pytest-runner", "flake8"],
     tests_require=["pytest"],
+    ext_modules=EXTENTIONS,
+    cmdclass=CMDCLASS,
+    cmake_install_dir="src/pathpy",
 )

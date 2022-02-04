@@ -10,3 +10,5 @@ API reference
 
    factorial
    InvalidFactorialError
+   add
+   subtract
