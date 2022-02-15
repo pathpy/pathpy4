@@ -7,6 +7,10 @@ int add(int i, int j) {
     return i + j;
 }
 
+int multiply(int i, int j) {
+    return i * j;
+}
+
 namespace py = pybind11;
 
 PYBIND11_MODULE(_pathpy, m) {
@@ -27,6 +31,12 @@ PYBIND11_MODULE(_pathpy, m) {
         Add two numbers
 
         Some other explanation about the add function.
+    )pbdoc");
+
+    m.def("multiply", &multiply, R"pbdoc(
+        Multiply two numbers
+
+        Some other explanation about the multiply function.
     )pbdoc");
 
     m.def("subtract", [](int i, int j) { return i - j; }, R"pbdoc(
