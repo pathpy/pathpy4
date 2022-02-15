@@ -5,7 +5,7 @@
 # pylint: disable=no-name-in-module
 # nopycln: file
 
-from pathpy._pathpy import add, subtract, multiply  # type: ignore
+from pathpy._pathpy import add, multiply, subtract  # type: ignore
 from pathpy.lib import InvalidFactorialError, factorial
 
 from . import _version
