@@ -25,3 +25,10 @@ setup: venv prepare_venv pre_commit
 clean:
 	rm -rf venv
 	find -iname "*.pyc" -delete
+
+pyclean:
+	-rm -f ./src/*.so
+	-rm -f ./src/pathpy/*.so
+	-rm -rf ./src/*.egg-info*
+	-rm -rf ./tmp/
+	-rm -rf ./build/

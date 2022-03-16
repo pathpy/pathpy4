@@ -3,7 +3,7 @@
 # =============================================================================
 # File      : setup.py -- Setup script for pathpy
 # Author    : Jürgen Hackl <hackl@ifi.uzh.ch>
-# Time-stamp: <Fri 2022-02-04 20:18 juergen>
+# Time-stamp: <Mon 2022-02-07 17:21 juergen>
 #
 # Copyright (c) 2016-2022 Pathpy Developers
 # =============================================================================
